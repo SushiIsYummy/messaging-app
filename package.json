@@ -1,0 +1,18 @@
+{
+  "name": "messaging-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "install-deps": "concurrently \"cd frontend && npm install\" \"cd backend && npm install\"",
+    "build": "concurrently \"cd frontend && npm run build\" \"cd backend && npm run build\"",
+    "lint": "concurrently \"cd frontend && npm run lint\" \"cd backend && npm run lint\"",
+    "lint:fix": "concurrently \"cd frontend && npm run lint:fix\" \"cd backend && npm run lint:fix\"",
+    "prettier": "concurrently \"cd frontend && npm run prettier\" \"cd backend && npm run prettier\"",
+    "prettier:fix": "concurrently \"cd frontend && npm run prettier:fix\" \"cd backend && npm run prettier:fix\"",
+    "test": "concurrently \"cd frontend && npm run test\" \"cd backend && npm run test\"",
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\""
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
