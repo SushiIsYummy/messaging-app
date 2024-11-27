@@ -12,7 +12,11 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write . --ignore-unknown",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "kysely-codegen": "kysely-codegen --dialect postgres --url env(DATABASE_URL) --out-file ./src/db/database-types.d.ts",
+    "migrate:latest": "kysely migrate:latest",
+    "migrate:up": "kysely migrate:up",
+    "migrate:down": "kysely migrate:down"
   },
   "keywords": [],
   "author": "",
@@ -23,10 +27,14 @@
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.7.5",
+    "@types/pg": "^8.11.10",
     "@vitest/coverage-v8": "^2.1.2",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.11.0",
+    "kysely": "^0.27.4",
+    "kysely-codegen": "^0.17.0",
+    "kysely-ctl": "^0.9.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "supertest": "^7.0.0",
@@ -42,6 +50,7 @@
     "express": "^4.21.1",
     "helmet": "^8.0.0",
     "morgan": "^1.10.0",
+    "pg": "^8.13.1",
     "zod": "^3.23.8"
   }
 }
