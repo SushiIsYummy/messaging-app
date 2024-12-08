@@ -13,7 +13,7 @@
     "prettier:fix": "prettier --write . --ignore-unknown",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "kysely-codegen": "kysely-codegen --dialect postgres --url \"env(DATABASE_URL)\" --out-file ./src/db/database-types.d.ts",
+    "kysely-codegen": "kysely-codegen --dialect postgres --url=\"env(DATABASE_URL)\" --out-file ./src/db/database-types.d.ts",
     "migrate:latest": "kysely migrate:latest",
     "migrate:up": "kysely migrate:up",
     "migrate:down": "kysely migrate:down"
